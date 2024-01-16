@@ -30,13 +30,34 @@ const myFuncEx2 = () => {
     let result
 
     if(hk === 1) {
-        result = ((inputS1 + (inputS2 * 3 )) / 3)
+        result = ((inputS1 + (inputS2 )) / 2)
     } else if (hk === 2) {
-        result = ((inputS1 + (inputS2 * 3 )) / 4)
+        result = ((inputS1 + (inputS2 * 2 )) / 3)
     } else if (hk === 3) {  
+        result = ((inputS1 + (inputS2 * 3 )) / 4)
+    } else if (hk === 4) {  
         result = ((inputS1 + (inputS2 * 4 )) / 5)
     }
     summary.value = result
+
+    const kq = document.getElementById('kq')
+
+    if (result >= 9) {
+        kq.innerHTML = 'Học sinh xuất sắc'
+        kq.style.color = 'Yellow'
+    } else if (result >= 8) {
+        kq.innerHTML = 'Học sinh giỏi'
+        kq.style.color = 'red'
+    } else if (result >= 6) {
+        kq.innerHTML = 'Học sinh khá'
+        kq.style.color = 'green'
+    } else if (result >= 5) {
+        kq.innerHTML = 'Học sinh trung bình'
+        kq.style.color = 'orange'
+    }  else {
+        kq.innerHTML = 'Học sinh yếu'
+        kq.style.color = 'green'
+    }
 }
 
 const myFuncEx3 = () => {
