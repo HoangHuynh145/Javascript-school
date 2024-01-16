@@ -11,7 +11,7 @@ const handleSell = () => {
     const price = frm.price.value;
     const discount = parseInt(frm.discount.value);
 
-    if(productName && quantity && price && discount) {
+    if(productName && quantity && price) {
         const tbodyTag = document.getElementById('table-body');
         const subtotal = (price * quantity) - ((discount / 100) * (price * quantity));
         const countProduct = tbodyTag.childElementCount;
